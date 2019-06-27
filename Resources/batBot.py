@@ -13,7 +13,7 @@ initial_extensions = [
 
 # Set "client" and get token from file.
 client = commands.Bot(command_prefix="$")
-token = open("DiscordBot\\resources\\token.txt","r").readline()
+token = open("./token.txt","r").readline()
 
 
 # Load cogs, print status to console for each cogload.
@@ -34,4 +34,4 @@ async def on_ready():
 
 
 # Connect to discord client.
-client.run(token, bot=True, reconnect=True)
+client.run(token.strip(), bot=True, reconnect=True)
